@@ -1,10 +1,15 @@
-import SignInForm from "@/components/forms/AuthForm";
+import { auth } from "@/lib/auth";
+import AuthForm from "@/components/forms/AuthForm";
 
 const SignIn = () => {
 	return (
-		<main>
-			<SignInForm />
-		</main>
+		<AuthForm
+			mode={"sign_in"}
+			defaultValues={{
+				email: "",
+				password: "",
+			}}
+		/>
 	);
 };
 
